@@ -10,14 +10,18 @@
 import requests
 import os
 
-url = "https://raw.githubusercontent.com/aalasaliano/licenseplate/main/best.pt"
 output_path = "best.pt"
+url = "https://raw.githubusercontent.com/aalasaliano/licenseplate/main/best.pt"
 
-# Download only if not exists
 if not os.path.exists(output_path):
-    r = requests.get(url)
-    with open(output_path, 'wb') as f:
-        f.write(r.content)
+    print("Downloading model from GitHub...")
+    response = requests.get(url)
+    if response.status_code == 200:
+        with open(output_path, "wb") as f:
+            f.write(response.content)
+        print("Download complete!")
+    else:
+        print(f"Download failed with status code: {response.status_code}")
 
 import streamlit as st
 import cv2
