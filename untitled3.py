@@ -9,6 +9,14 @@
 
 import requests
 import os
+import streamlit as st
+import cv2
+import numpy as np
+from ultralytics import YOLO
+import easyocr
+from PIL import Image
+import tempfile
+
 
 output_path = "best.pt"
 url = "https://raw.githubusercontent.com/aalasaliano/licenseplate/main/best.pt"
@@ -23,16 +31,8 @@ if not os.path.exists(output_path):
     else:
         print(f"Download failed with status code: {response.status_code}")
 
-import streamlit as st
-import cv2
-import numpy as np
-from ultralytics import YOLO
-import easyocr
-from PIL import Image
-import tempfile
-
 # Load model YOLO
-model = YOLO("output_path")
+model = YOLO(output_path)
 
 # Load OCR
 reader = easyocr.Reader(['en'])
