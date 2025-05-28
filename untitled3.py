@@ -47,7 +47,7 @@ uploaded_file = st.file_uploader("Pilih gambar", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
     # Buka dan tampilkan gambar
     image = Image.open(uploaded_file)
-    st.image(image, caption="Gambar yang diupload", use_column_width=True)
+    st.image(image, caption="Gambar yang diupload", use_container_width=True)
 
     # Konversi ke format OpenCV
     image_np = np.array(image)
@@ -92,4 +92,4 @@ if uploaded_file is not None:
             st.warning("Tidak ada teks terdeteksi.")
 
         # Tampilkan crop hasil plat
-        st.image(cv2.cvtColor(plate_crop, cv2.COLOR_BGR2RGB), caption="Cropped Plate", use_column_width=False)
+        st.image(cv2.cvtColor(plate_crop, cv2.COLOR_BGR2RGB), caption="Cropped Plate", use_container_width=False)
