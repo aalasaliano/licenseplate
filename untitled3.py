@@ -7,6 +7,16 @@
 #     https://colab.research.google.com/drive/1VeV3jCdoJu_i8I4dRrQsU5mdqLO5leMg
 # """
 
+import requests
+url = "https://raw.githubusercontent.com/aalasaliano/licenseplate/main/best.pt"
+output_path = "best.pt"
+
+# Download only if not exists
+if not os.path.exists(output_path):
+    r = requests.get(url)
+    with open(output_path, 'wb') as f:
+        f.write(r.content)
+
 import streamlit as st
 import cv2
 import numpy as np
@@ -17,7 +27,7 @@ import tempfile
 import os
 
 # Load model YOLO
-model = YOLO("/best.pt")
+model = YOLO("output_path")
 
 # Load OCR
 reader = easyocr.Reader(['en'])
