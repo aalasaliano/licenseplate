@@ -8,6 +8,8 @@
 # """
 
 import requests
+import os
+
 url = "https://raw.githubusercontent.com/aalasaliano/licenseplate/main/best.pt"
 output_path = "best.pt"
 
@@ -24,7 +26,6 @@ from ultralytics import YOLO
 import easyocr
 from PIL import Image
 import tempfile
-import os
 
 # Load model YOLO
 model = YOLO("output_path")
