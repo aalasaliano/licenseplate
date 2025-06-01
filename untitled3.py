@@ -37,12 +37,28 @@ model = YOLO(output_path)
 # Load OCR
 reader = easyocr.Reader(['en'])
 
+# Trying CSS
+st.markdown("""
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        .stButton>button {
+            color: white;
+            background-color: #4CAF50;
+            border-radius: 8px;
+            padding: 0.5em 1em;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Judul aplikasi
-st.title("🚗 License Plate Recognition")
-st.markdown("Upload gambar kendaraan, dan sistem akan mendeteksi serta membaca plat nomor menggunakan YOLO dan EasyOCR.")
+st.title("Pendeteksi Plat Nomor Kendaraan Indonesia")
+st.markdown("Kelompok 9: Aliyah Jasmine, Ashley Azzahra, Risya Safira")
 
 # Upload gambar
-uploaded_file = st.file_uploader("Pilih gambar", type=["jpg", "jpeg", "png"])
+uploaded_file = st.file_uploader("Upload gambarmu di sini!", type=["jpg", "jpeg", "png"])
 
 if uploaded_file is not None:
     # Buka dan tampilkan gambar
