@@ -39,7 +39,7 @@ reader = easyocr.Reader(['en'])
 
 # Edit UI sedikit
 st.markdown("""
-    <h2 style='color: ##ffb3c2; font-family: Courier New;'>Pendeteksi Plat Nomor Kendaraan Indonesia</h2>
+    <h2 style='color: #FFB3C2; font-family: Courier New;'>Pendeteksi Plat Nomor Kendaraan Indonesia</h2>
     <p style='font-size:18px; color:white;'>Kelompok 9: Aliyah Jasmine, Ashley Azzahra, Risya Safira</p>
 """, unsafe_allow_html=True)
 
