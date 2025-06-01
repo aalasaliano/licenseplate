@@ -39,13 +39,10 @@ reader = easyocr.Reader(['en'])
 
 # Edit UI sedikit
 st.markdown("""
+    <body style="background-color:powderblue;">
     <h2 style='color: #FFB3C2; font-family: Courier New;'>Pendeteksi Plat Nomor Kendaraan Indonesia</h2>
-    <p style='font-size:18px; color:white;'>Kelompok 9: Aliyah Jasmine, Ashley Azzahra, Risya Safira</p>
+    <p style='font-size:18px; color:#FFB3C2;'>Kelompok 9: Aliyah Jasmine, Ashley Azzahra, Risya Safira</p>
 """, unsafe_allow_html=True)
-
-# # Judul aplikasi
-# st.title("Pendeteksi Plat Nomor Kendaraan Indonesia")
-# st.markdown("Kelompok 9: Aliyah Jasmine, Ashley Azzahra, Risya Safira")
 
 # Upload gambar
 uploaded_file = st.file_uploader("Upload gambarmu di sini!", type=["jpg", "jpeg", "png"])
