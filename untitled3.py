@@ -53,9 +53,14 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Judul aplikasi
-st.title("Pendeteksi Plat Nomor Kendaraan Indonesia")
-st.markdown("Kelompok 9: Aliyah Jasmine, Ashley Azzahra, Risya Safira")
+st.markdown("""
+    <h2 style='color: #4CAF50; font-family: Arial;'>🚗 License Plate Recognition</h2>
+    <p style='font-size:18px; color:gray;'>Upload gambar, dan kami akan mengenali plat nomornya.</p>
+""", unsafe_allow_html=True)
+
+# # Judul aplikasi
+# st.title("Pendeteksi Plat Nomor Kendaraan Indonesia")
+# st.markdown("Kelompok 9: Aliyah Jasmine, Ashley Azzahra, Risya Safira")
 
 # Upload gambar
 uploaded_file = st.file_uploader("Upload gambarmu di sini!", type=["jpg", "jpeg", "png"])
